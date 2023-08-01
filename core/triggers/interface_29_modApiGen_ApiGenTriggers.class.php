@@ -18,7 +18,7 @@
 
 /**
  * \file    core/triggers/interface_99_modApiGen_ApiGenTriggers.class.php
- * \ingroup tranche
+ * \ingroup apigen
  * \brief   Example trigger.
  *
  */
@@ -57,7 +57,7 @@ class InterfaceApiGenTriggers extends DolibarrTriggers
 		$this->description = "ApiGen triggers.";
 		// 'development', 'experimental', 'dolibarr' or version
 		$this->version = '1.0.0';
-		$this->picto = 'tranche@tranche';
+		$this->picto = 'apigen@apigen';
 	}
 
 	/**
@@ -95,7 +95,7 @@ class InterfaceApiGenTriggers extends DolibarrTriggers
 	 */
 	public function runTrigger($action, $object, User $user, Translate $langs, Conf $conf)
 	{
-        if (empty($conf->tranche->enabled)) return 0;     // Module not active, we do nothing
+        if (empty($conf->apigen->enabled)) return 0;     // Module not active, we do nothing
 
 	    // Put here code you want to execute when a Dolibarr business events occurs.
 		// Data and type of action are stored into $object and $action
